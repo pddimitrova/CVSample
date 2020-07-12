@@ -14,6 +14,8 @@ class UserApi {
   //region query parameters
 
   Future<UserResponseModel> getUserById({@required String id}) async {
+    ///simulate a network request delay
+    await Future.delayed(Duration(seconds: 1));
     return UserResponseModel.fromJson({
       'Id': '1',
       'Name': 'Plamena Dimitrova',
