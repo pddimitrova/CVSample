@@ -8,6 +8,7 @@ part of 'user_response_model.dart';
 
 UserResponseModel _$UserResponseModelFromJson(Map<String, dynamic> json) {
   return UserResponseModel(
+    id: json['Id'] as String,
     name: json['Name'] as String,
     phoneNumber: json['PhoneNumber'] as String,
     email: json['Email'] as String,
@@ -29,6 +30,7 @@ UserResponseModel _$UserResponseModelFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$UserResponseModelToJson(UserResponseModel instance) =>
     <String, dynamic>{
+      'Id': instance.id,
       'Name': instance.name,
       'PhoneNumber': instance.phoneNumber,
       'Email': instance.email,
