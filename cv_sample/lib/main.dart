@@ -8,6 +8,7 @@ import 'package:flutter_simple_dependency_injection/injector.dart';
 import 'feature_user_details/bloc/user_bloc.dart';
 
 void main() {
+  ///initializing the DI container
   final injector = ModuleContainer().initialise(Injector.getInjector());
   runApp(MyApp(injector));
 }
@@ -17,11 +18,10 @@ class MyApp extends StatelessWidget {
 
   final Injector injector;
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Plamena Dimitrova CV',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+///Module for simple DI
 class ModuleContainer {
   Injector initialise(Injector injector) {
     injector.map<UserApi>((i) => UserApi(), isSingleton: true);

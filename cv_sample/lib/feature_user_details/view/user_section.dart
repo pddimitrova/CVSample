@@ -1,6 +1,9 @@
 import 'package:cv_sample/util/text_styles.dart';
 import 'package:flutter/material.dart';
 
+///A wrapper widget for profile sections
+///that consists of styled title using [headingText]
+///and [body]
 class UserSection extends StatelessWidget {
   UserSection({
     @required this.headingText,

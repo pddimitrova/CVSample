@@ -8,13 +8,10 @@ class UserState extends Equatable {
   List<Object> get props => [];
 }
 
-@immutable
 class UserInitialState extends UserState {}
 
-@immutable
 class UserLoadingState extends UserState {}
 
-@immutable
 class UserLoadedState extends UserState {
   final UserResponseModel user;
 
