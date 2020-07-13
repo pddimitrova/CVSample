@@ -13,6 +13,7 @@ class ExperienceSection extends StatelessWidget {
   Widget build(BuildContext context) => UserSection(
       headingText: 'Experience',
       body: ListView.separated(
+        padding: const EdgeInsets.all(0),
         itemCount: experienceList.length,
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),

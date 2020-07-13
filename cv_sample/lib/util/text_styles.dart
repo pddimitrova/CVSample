@@ -7,7 +7,7 @@ class TextStyles {
   static const String _headingFontFamily = 'PlayfairDisplay';
   static const String _contentFontFamily = 'Spectral';
 
-  static const TextStyle darkTitle = TextStyle(
+  static const TextStyle title = TextStyle(
     color: Colors.black,
     fontFamily: _titleFontFamily,
     fontStyle: FontStyle.normal,

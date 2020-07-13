@@ -44,6 +44,7 @@ class _SkillList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.all(0),
       itemCount: skills.length,
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),

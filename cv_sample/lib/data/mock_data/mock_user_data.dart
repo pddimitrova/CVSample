@@ -34,7 +34,7 @@ class MockUserData {
         'Location': 'Blagoevgrad, Bulgaria',
         'Description':
             'As developer:\nParticipate in full lifecycle of development on various client projects, namely developing features and writing unit tests.\nAs consultant:\nHelp clients shape their product vision by providing technical insights, industry best practices and ideas.\nAs mentor:\nInterview current interns to help in selecting the most prospective ones to move forward to permanent employment contracts. Help colleagues by sharing professional experience and aid them through navigating new technologies.',
-        'DateStart': '01/2020',
+        'DateStart': '06/2016',
         'DateEnd': '12/2019',
       }
     ],

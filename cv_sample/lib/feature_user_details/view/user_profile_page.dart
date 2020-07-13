@@ -20,30 +20,28 @@ class UserProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: BlocBuilder<UserBloc, UserState>(
-          builder: (context, userState) {
-            if (userState is UserInitialState) {
-              return Center(
-                child: RaisedButton(
-                  child: Text(
-                    'Load User Details',
-                    style: TextStyles.content,
-                  ),
-                  onPressed: () =>
-                      context.bloc<UserBloc>().add(UserDetailsEvent(userId)),
+      body: BlocBuilder<UserBloc, UserState>(
+        builder: (context, userState) {
+          if (userState is UserInitialState) {
+            return Center(
+              child: RaisedButton(
+                child: Text(
+                  'Load User Details',
+                  style: TextStyles.content,
                 ),
-              );
-            } else if (userState is UserLoadingState) {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            } else if (userState is UserLoadedState) {
-              return _buildLoadedState(userState.user);
-            }
-            return Container(color: Colors.pink);
-          },
-        ),
+                onPressed: () =>
+                    context.bloc<UserBloc>().add(UserDetailsEvent(userId)),
+              ),
+            );
+          } else if (userState is UserLoadingState) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (userState is UserLoadedState) {
+            return _buildLoadedState(userState.user);
+          }
+          return Container();
+        },
       ),
     );
   }
@@ -53,18 +51,20 @@ class UserProfilePage extends StatelessWidget {
       slivers: <Widget>[
         SliverAppBar(
           backgroundColor: Colors.white,
+          brightness: Brightness.light,
           pinned: true,
           centerTitle: false,
           automaticallyImplyLeading: false,
           expandedHeight: 100,
           flexibleSpace: FlexibleSpaceBar(
+            centerTitle: false,
             titlePadding: EdgeInsets.symmetric(horizontal: 24),
-            title: Text(user.name, style: TextStyles.darkTitle),
+            title: Text(user.name, style: TextStyles.title),
           ),
         ),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.only(left: 24, right: 24, bottom: 24),
+            padding: const EdgeInsets.only(left: 24, right: 24, bottom: 32),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
