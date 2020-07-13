@@ -13,6 +13,7 @@ class EducationSection extends StatelessWidget {
   Widget build(BuildContext context) => UserSection(
       headingText: 'Education',
       body: ListView.separated(
+        padding: const EdgeInsets.all(0),
         itemCount: educationList.length,
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
